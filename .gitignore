@@ -1,0 +1,2 @@
+infra/main/eu-west-1/test/*/.terragrunt-cache
+.DS_Store
