@@ -68,6 +68,14 @@ inputs = {
           protocol = "tcp"
         }
       ]
+      logConfiguration = {
+        logDriver = "awslogs"
+        options = {
+          "awslogs-group" = "/ecs/${local.project_name}"
+          "awslogs-region" = "eu-west-1"
+          "awslogs-stream-prefix" = "ecs"
+        }
+      }
     }
   ]
 }
