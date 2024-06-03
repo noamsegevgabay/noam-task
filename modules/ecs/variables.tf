@@ -30,18 +30,23 @@ variable "memory" {
 
 variable "container_definitions" {
   type = list(object({
-    name   = string
-    image  = string
-    cpu    = number
-    memory = number
-    portMappings = list(object({
+    name             = string
+    image            = string
+    cpu              = number
+    memory           = number
+    portMappings     = list(object({
       containerPort = number
       hostPort      = number
       protocol      = string
     }))
+    logConfiguration = object({
+      logDriver = string
+      options   = map(string)
+    })
   }))
   description = "The container definitions of the task definition"
 }
+
 
 variable "desired_count" {
   type        = number
