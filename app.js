@@ -9,7 +9,7 @@ const server = http.createServer((req, res) => {
     }
 
     res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Hello cloudride, how are u? :) \n');
+    res.end('Hello cloudride, how are u? 123 :) \n');
   } catch (err) {
     // Log the error to CloudWatch Logs
     console.error(err);
